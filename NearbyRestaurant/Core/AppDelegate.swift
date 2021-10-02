@@ -9,12 +9,18 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
+    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.setupRootView()
         return true
+    }
+    
+    private func setupRootView() {
+        window = UIWindow()
+        window?.rootViewController = MapVC()
+        window?.makeKeyAndVisible()
     }
 }
 
