@@ -9,10 +9,14 @@ import UIKit
 import GoogleMaps
 import RxCoreLocation
 import RxSwift
+import GoogleMobileAds
 
 class MapVC: UIViewController, CLLocationManagerDelegate, UIScrollViewDelegate {
+    
+    // MARK: - IBOutlet
     @IBOutlet weak var tfSearch: UISearchBar!
     @IBOutlet weak var placesTableView: UITableView!
+    var bannerView: GADBannerView!
     
     // MARK: - Variable
     private var _mapView: GMSMapView?
@@ -43,6 +47,8 @@ class MapVC: UIViewController, CLLocationManagerDelegate, UIScrollViewDelegate {
     // MARK: - Helper Functions
     func setup() {
         self.setupMap()
+        self.setupViewUI()
+        self.setupAds()
     }
     
     func setupMap() {
@@ -51,7 +57,6 @@ class MapVC: UIViewController, CLLocationManagerDelegate, UIScrollViewDelegate {
         self.setupUI()
         self.didChangeAuthorization()
         self.didUpdateLocation()
-        self.setupViewUI()
     }
     
     //MARK: - IBAction
@@ -157,7 +162,7 @@ extension MapVC {
         _mapView.addSubview(nearbyRestaurentButton)
         nearbyRestaurentButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            nearbyRestaurentButton.topAnchor.constraint(equalTo: _mapView.topAnchor, constant: 100),
+            nearbyRestaurentButton.topAnchor.constraint(equalTo: _mapView.topAnchor, constant: 70),
             nearbyRestaurentButton.trailingAnchor.constraint(equalTo: _mapView.trailingAnchor, constant: -20)
         ])
         self.nearbyRestaurentButton.addTarget(self, action: #selector(getNearByRestaurent), for: .touchUpInside)
@@ -172,5 +177,27 @@ extension MapVC {
             polyline.strokeColor = .red
             polyline.map = self._mapView
         }
+    }
+}
+
+extension MapVC {
+    func setupAds() {
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+    }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        guard let _mapView = _mapView else { return }
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        _mapView.addSubview(bannerView)
+        NSLayoutConstraint.activate([
+            bannerView.topAnchor.constraint(equalTo: _mapView.topAnchor, constant: 100),
+            bannerView.trailingAnchor.constraint(equalTo: _mapView.trailingAnchor, constant: -20),
+            bannerView.leadingAnchor.constraint(equalTo: _mapView.leadingAnchor, constant: 20),
+            bannerView.heightAnchor.constraint(equalToConstant: 120)
+        ])
     }
 }

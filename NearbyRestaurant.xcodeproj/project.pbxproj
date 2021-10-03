@@ -11,6 +11,12 @@
 		9105B9F92709163500FC87CD /* DummeyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9105B9F82709163500FC87CD /* DummeyData.swift */; };
 		9105B9FD27091A4C00FC87CD /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9105B9FB27091A4C00FC87CD /* PlaceCell.swift */; };
 		9105B9FE27091A4C00FC87CD /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9105B9FC27091A4C00FC87CD /* PlaceCell.xib */; };
+		9105BA022709213900FC87CD /* nanopb.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105B9FF2709213900FC87CD /* nanopb.xcframework */; };
+		9105BA032709213900FC87CD /* UserMessagingPlatform.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105BA002709213900FC87CD /* UserMessagingPlatform.xcframework */; };
+		9105BA042709213900FC87CD /* PromisesObjC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105BA012709213900FC87CD /* PromisesObjC.xcframework */; };
+		9105BA082709214500FC87CD /* GoogleAppMeasurement.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105BA052709214500FC87CD /* GoogleAppMeasurement.xcframework */; };
+		9105BA092709214500FC87CD /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105BA062709214500FC87CD /* GoogleUtilities.xcframework */; };
+		9105BA0A2709214500FC87CD /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105BA072709214500FC87CD /* GoogleMobileAds.xcframework */; };
 		91A5A0C52708B5F6005DF063 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5A0C42708B5F6005DF063 /* AppDelegate.swift */; };
 		91A5A0CE2708B600005DF063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A5A0CD2708B600005DF063 /* Assets.xcassets */; };
 		91A5A0D12708B600005DF063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A5A0CF2708B600005DF063 /* LaunchScreen.storyboard */; };
@@ -37,6 +43,12 @@
 		9105B9F82709163500FC87CD /* DummeyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummeyData.swift; sourceTree = "<group>"; };
 		9105B9FB27091A4C00FC87CD /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		9105B9FC27091A4C00FC87CD /* PlaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
+		9105B9FF2709213900FC87CD /* nanopb.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = nanopb.xcframework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-8.11.0/nanopb.xcframework"; sourceTree = "<group>"; };
+		9105BA002709213900FC87CD /* UserMessagingPlatform.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UserMessagingPlatform.xcframework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-8.11.0/UserMessagingPlatform.xcframework"; sourceTree = "<group>"; };
+		9105BA012709213900FC87CD /* PromisesObjC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PromisesObjC.xcframework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-8.11.0/PromisesObjC.xcframework"; sourceTree = "<group>"; };
+		9105BA052709214500FC87CD /* GoogleAppMeasurement.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleAppMeasurement.xcframework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-8.11.0/GoogleAppMeasurement.xcframework"; sourceTree = "<group>"; };
+		9105BA062709214500FC87CD /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleUtilities.xcframework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-8.11.0/GoogleUtilities.xcframework"; sourceTree = "<group>"; };
+		9105BA072709214500FC87CD /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-8.11.0/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
 		91A5A0C12708B5F6005DF063 /* NearbyRestaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearbyRestaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A5A0C42708B5F6005DF063 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91A5A0CD2708B600005DF063 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +75,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9105BA082709214500FC87CD /* GoogleAppMeasurement.xcframework in Frameworks */,
+				9105BA092709214500FC87CD /* GoogleUtilities.xcframework in Frameworks */,
+				9105BA0A2709214500FC87CD /* GoogleMobileAds.xcframework in Frameworks */,
+				9105BA022709213900FC87CD /* nanopb.xcframework in Frameworks */,
+				9105BA032709213900FC87CD /* UserMessagingPlatform.xcframework in Frameworks */,
+				9105BA042709213900FC87CD /* PromisesObjC.xcframework in Frameworks */,
 				B7266D31683A66BC416B0A2B /* Pods_NearbyRestaurant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +234,12 @@
 		F7046676A45AD1ADF38761F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9105BA052709214500FC87CD /* GoogleAppMeasurement.xcframework */,
+				9105BA072709214500FC87CD /* GoogleMobileAds.xcframework */,
+				9105BA062709214500FC87CD /* GoogleUtilities.xcframework */,
+				9105B9FF2709213900FC87CD /* nanopb.xcframework */,
+				9105BA012709213900FC87CD /* PromisesObjC.xcframework */,
+				9105BA002709213900FC87CD /* UserMessagingPlatform.xcframework */,
 				6305875517641FAA3164C01C /* Pods_NearbyRestaurant.framework */,
 			);
 			name = Frameworks;
@@ -443,6 +467,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -497,6 +522,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
