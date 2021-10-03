@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapVC" customModule="NearbyRestaurant" customModuleProvider="target">
             <connections>
+                <outlet property="_mapView" destination="wy4-9b-1h2" id="f4P-6C-RHM"/>
+                <outlet property="mainStackView" destination="x1u-al-9u8" id="gaD-Yz-qwC"/>
                 <outlet property="placesTableView" destination="MVF-qr-TiR" id="wdm-8b-dYv"/>
                 <outlet property="tfSearch" destination="fKa-hd-8Nb" id="WJi-j7-te6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -21,30 +23,48 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x1u-al-9u8">
-                    <rect key="frame" x="20" y="64" width="374" height="200"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="x1u-al-9u8">
+                    <rect key="frame" x="20" y="105" width="374" height="252"/>
                     <subviews>
+                        <searchBar contentMode="redraw" id="fKa-hd-8Nb">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="51"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MVF-qr-TiR">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                            <rect key="frame" x="0.0" y="52" width="374" height="200"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="200" id="ADG-ye-rTQ"/>
                             </constraints>
-                            <searchBar key="tableHeaderView" contentMode="redraw" id="fKa-hd-8Nb">
-                                <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </tableView>
                     </subviews>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wy4-9b-1h2" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="357" width="414" height="505"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxS-tq-IHZ">
+                    <rect key="frame" x="249.5" y="64" width="144.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Nearby Restaurent"/>
+                    <connections>
+                        <action selector="getNearByRestaurent:" destination="-1" eventType="touchUpInside" id="uyk-7M-J8C"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="x1u-al-9u8" secondAttribute="trailing" constant="20" id="8m5-yJ-UC5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fxS-tq-IHZ" secondAttribute="trailing" constant="20" id="N1Q-Ux-VVv"/>
+                <constraint firstItem="x1u-al-9u8" firstAttribute="top" secondItem="fxS-tq-IHZ" secondAttribute="bottom" constant="10" id="RV0-tm-Loh"/>
                 <constraint firstItem="x1u-al-9u8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="bSv-Vq-jy1"/>
-                <constraint firstItem="x1u-al-9u8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="xql-Cd-Bgw"/>
+                <constraint firstItem="wy4-9b-1h2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gP1-ZH-gAN"/>
+                <constraint firstItem="wy4-9b-1h2" firstAttribute="top" secondItem="x1u-al-9u8" secondAttribute="bottom" id="iAI-X9-gSv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wy4-9b-1h2" secondAttribute="trailing" id="t1L-g9-1xN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wy4-9b-1h2" secondAttribute="bottom" id="u1q-fV-eBD"/>
+                <constraint firstItem="fxS-tq-IHZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="x9M-QT-Q5t"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </view>

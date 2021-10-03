@@ -17,6 +17,7 @@
 		9105BA082709214500FC87CD /* GoogleAppMeasurement.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105BA052709214500FC87CD /* GoogleAppMeasurement.xcframework */; };
 		9105BA092709214500FC87CD /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105BA062709214500FC87CD /* GoogleUtilities.xcframework */; };
 		9105BA0A2709214500FC87CD /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105BA072709214500FC87CD /* GoogleMobileAds.xcframework */; };
+		9105BA0D2709316900FC87CD /* UITableViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9105BA0C2709316900FC87CD /* UITableViewEx.swift */; };
 		91A5A0C52708B5F6005DF063 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5A0C42708B5F6005DF063 /* AppDelegate.swift */; };
 		91A5A0CE2708B600005DF063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A5A0CD2708B600005DF063 /* Assets.xcassets */; };
 		91A5A0D12708B600005DF063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A5A0CF2708B600005DF063 /* LaunchScreen.storyboard */; };
@@ -49,6 +50,7 @@
 		9105BA052709214500FC87CD /* GoogleAppMeasurement.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleAppMeasurement.xcframework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-8.11.0/GoogleAppMeasurement.xcframework"; sourceTree = "<group>"; };
 		9105BA062709214500FC87CD /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleUtilities.xcframework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-8.11.0/GoogleUtilities.xcframework"; sourceTree = "<group>"; };
 		9105BA072709214500FC87CD /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-8.11.0/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
+		9105BA0C2709316900FC87CD /* UITableViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewEx.swift; sourceTree = "<group>"; };
 		91A5A0C12708B5F6005DF063 /* NearbyRestaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearbyRestaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A5A0C42708B5F6005DF063 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91A5A0CD2708B600005DF063 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +108,22 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
+		9105BA0B2709315200FC87CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9105BA0E2709318F00FC87CD /* UIView */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9105BA0E2709318F00FC87CD /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				9105BA0C2709316900FC87CD /* UITableViewEx.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		91A5A0B82708B5F6005DF063 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +149,7 @@
 				91A5A0E12708B800005DF063 /* Model */,
 				91A5A0DA2708B762005DF063 /* Scenes */,
 				91A5A0E62708F218005DF063 /* Services */,
+				9105BA0B2709315200FC87CD /* Extensions */,
 				91A5A0D92708B741005DF063 /* Constant */,
 				91A5A0D82708B738005DF063 /* Resources */,
 				91A5A0D22708B600005DF063 /* Info.plist */,
@@ -385,6 +404,7 @@
 				91A5A0F12708F360005DF063 /* CustomIntercepter.swift in Sources */,
 				91A5A0FA2708FF51005DF063 /* PlaceMarker.swift in Sources */,
 				91A5A0F42708F3EE005DF063 /* PlaceNetwork.swift in Sources */,
+				9105BA0D2709316900FC87CD /* UITableViewEx.swift in Sources */,
 				91A5A0C52708B5F6005DF063 /* AppDelegate.swift in Sources */,
 				91A5A0F62708F41D005DF063 /* NearbyRestaurant.swift in Sources */,
 				91A5A0E32708B990005DF063 /* MapViewModel.swift in Sources */,

@@ -25,8 +25,14 @@ class MapViewModel {
     var arrRestaurents: PublishSubject<GooglePlacesResponse> = .init()
     var routeToDraw: PublishSubject<Route> = .init()
     var dummyDataPlaces: BehaviorRelay<[DummeyPlaces]> = .init(value: [])
+    var searchData: BehaviorRelay<[DummeyPlaces]> = .init(value: [])
     var getDummyDataPlaces: PublishSubject<[DummeyPlaces]> = .init()
     var selectedPlace: PublishSubject<DummeyPlaces> = .init()
+    
+    
+    func viewDidLoad() {
+        self.getDummyPlaceAPI()
+    }
     
     func getNearbyRestaurentEndpoint() {
         let coordinate = CLLocationCoordinate2D(latitude: locationManager.location?.coordinate.latitude ?? 0.0, longitude: locationManager.location?.coordinate.longitude ?? 0.0)
@@ -62,6 +68,7 @@ class MapViewModel {
             switch result {
             case .success(let reponse):
                 let places = reponse
+                self.dummyDataPlaces.accept(places ?? [])
                 self.getDummyDataPlaces.onNext(places ?? [])
             case .failure(let error):
                 print(error.localizedDescription)
@@ -70,7 +77,7 @@ class MapViewModel {
     }
     
     func didSelectDummyPlace(indexPath: IndexPath) {
-        let place = dummyDataPlaces.value[indexPath.row]
+        let place = searchData.value[indexPath.row]
         self.selectedPlace.onNext(place)
     }
 }
