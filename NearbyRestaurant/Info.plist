@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>UserLocation</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-2559564046715323~6653115980</string>
+	<key>SKAdNetworkItems</key>
+	<array>
+		<string>2fnua5tdw4.skadnetwork</string>
+	</array>
+</dict>
 </plist>
